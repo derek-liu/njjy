@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFDF1E0" >
+    android:background="@color/main" >
 	<FrameLayout 
 	    android:id="@+id/main_navi"
 	    android:layout_width="match_parent"
@@ -14,14 +14,14 @@
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center"
 	        android:textSize="22sp"
-	        android:textColor="#FF231F20"
+	        android:textColor="@color/black_deep"
 	        android:text="@string/home_title" />
 	</FrameLayout>
 	<View
 	    android:layout_width="match_parent"
 	    android:layout_height="4dp"
 	    android:background="#FFA02D4F" />
-	<cn.njjy.group.view.PTRListView
+	<cn.gov.jyq.view.PTRListView
 	    android:id="@+id/main_list"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent" />

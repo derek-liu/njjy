@@ -4,4 +4,6 @@
     <color name="black_deep">#FF231F20</color>
     <color name="black_light">#FF343434</color>
     <color name="grey">#FFB9B2AA</color>
+    <color name="tab_line">#FF343434</color>
+    <color name="title">#FFF7E8D7</color>
 </resources>

@@ -23,6 +23,8 @@ containing a value of this type.
         public static final int black_light=0x7f040002;
         public static final int grey=0x7f040003;
         public static final int main=0x7f040000;
+        public static final int tab_line=0x7f040004;
+        public static final int title=0x7f040005;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -32,31 +34,56 @@ containing a value of this type.
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int refresh_header_arrow=0x7f020001;
-        public static final int refresh_header_p1=0x7f020002;
-        public static final int refresh_header_p2=0x7f020003;
-        public static final int refresh_header_p3=0x7f020004;
-        public static final int refresh_header_p4=0x7f020005;
-        public static final int refresh_progress=0x7f020006;
+        public static final int icon_back_btn=0x7f020001;
+        public static final int icon_more_btn=0x7f020002;
+        public static final int loading_09=0x7f020003;
+        public static final int loading_10=0x7f020004;
+        public static final int loading_11=0x7f020005;
+        public static final int loading_12=0x7f020006;
+        public static final int loading_13=0x7f020007;
+        public static final int loading_14=0x7f020008;
+        public static final int loading_15=0x7f020009;
+        public static final int loading_16=0x7f02000a;
+        public static final int loading_progress=0x7f02000b;
+        public static final int refresh_header_arrow=0x7f02000c;
+        public static final int refresh_header_p1=0x7f02000d;
+        public static final int refresh_header_p2=0x7f02000e;
+        public static final int refresh_header_p3=0x7f02000f;
+        public static final int refresh_header_p4=0x7f020010;
+        public static final int refresh_progress=0x7f020011;
+        public static final int v2_bg_black=0x7f020012;
     }
     public static final class id {
-        public static final int item_content=0x7f080004;
-        public static final int item_date=0x7f080007;
-        public static final int item_pic=0x7f080005;
-        public static final int item_text=0x7f080006;
-        public static final int item_title=0x7f080003;
-        public static final int main_list=0x7f080002;
-        public static final int main_navi=0x7f080000;
-        public static final int main_navi_title=0x7f080001;
-        public static final int pull_to_refresh_image=0x7f08000a;
-        public static final int pull_to_refresh_progress=0x7f080009;
-        public static final int pull_to_refresh_text=0x7f080008;
+        public static final int cate_title=0x7f08000e;
+        public static final int content_loading=0x7f080003;
+        public static final int content_name=0x7f080006;
+        public static final int content_navi=0x7f080000;
+        public static final int content_navi_left=0x7f080001;
+        public static final int content_navi_title=0x7f080002;
+        public static final int content_text=0x7f080007;
+        public static final int content_title=0x7f080005;
+        public static final int content_view=0x7f080004;
+        public static final int item_content=0x7f080010;
+        public static final int item_date=0x7f080013;
+        public static final int item_pic=0x7f080011;
+        public static final int item_text=0x7f080012;
+        public static final int item_title=0x7f08000f;
+        public static final int main_cate=0x7f08000d;
+        public static final int main_list=0x7f08000c;
+        public static final int main_navi=0x7f080008;
+        public static final int main_navi_right=0x7f08000a;
+        public static final int main_navi_title=0x7f080009;
+        public static final int main_sub_title=0x7f08000b;
+        public static final int pull_to_refresh_image=0x7f080016;
+        public static final int pull_to_refresh_progress=0x7f080015;
+        public static final int pull_to_refresh_text=0x7f080014;
     }
     public static final class layout {
         public static final int activity_content=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int list_item=0x7f030002;
-        public static final int refresh_header=0x7f030003;
+        public static final int cate_item=0x7f030002;
+        public static final int list_item=0x7f030003;
+        public static final int refresh_header=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -64,6 +91,7 @@ containing a value of this type.
         public static final int pull_to_refresh_normal=0x7f060003;
         public static final int pull_to_refresh_refreshing=0x7f060001;
         public static final int pull_to_refresh_release=0x7f060002;
+        public static final int title=0x7f060005;
     }
     public static final class style {
         /** 

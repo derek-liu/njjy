@@ -1,8 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-
-</LinearLayout>
+    android:background="@color/main" >
+    <FrameLayout 
+	    android:id="@+id/content_navi"
+	    android:layout_width="match_parent"
+	    android:layout_gravity="top"
+	    android:layout_height="44dp" >
+	    <ImageView 
+	        android:id="@+id/content_navi_left"
+	        android:layout_width="60dp"
+	        android:layout_height="44dp"
+	        android:layout_gravity="left"
+	        android:src="@drawable/icon_back_btn" />
+	    <TextView
+	        android:id="@+id/content_navi_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="22sp"
+	        android:textColor="@color/black_deep"
+	        android:text="@string/title" />
+	</FrameLayout>
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="4dp"
+	    android:layout_gravity="top"
+	    android:layout_marginTop="44dp"
+	    android:background="#FFA02D4F" />
+	
+	<ImageView
+	    android:id="@+id/content_loading"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_gravity="center"
+	    android:src="@drawable/loading_progress" />
+	
+	<ScrollView
+	    android:id="@+id/content_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="top"
+	    android:layout_marginTop="48dp"
+	    android:visibility="gone" >
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        <TextView 
+	    		android:id="@+id/content_title"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_marginLeft="10dp"
+	    		android:layout_marginRight="10dp"
+	    		android:layout_marginTop="20dp"
+	    		android:minHeight="80dp"
+	    		android:gravity="left|center_vertical"
+	    		android:textSize="22sp"
+	    		android:textColor="@color/black_deep"/>
+    		<View
+        		android:layout_width="match_parent"
+        		android:layout_height="1dp"
+        		android:layout_marginLeft="10dp"
+	    		android:layout_marginRight="10dp"
+        		android:background="@color/tab_line" />
+			<TextView 
+	    		android:id="@+id/content_name"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="30dp"
+	    		android:gravity="left|center_vertical"
+	    		android:layout_marginLeft="10dp"
+	    		android:layout_marginRight="10dp"
+	    		android:textSize="14sp"
+	    		android:textColor="@color/black_light"/>
+    		<View
+        		android:layout_width="match_parent"
+        		android:layout_height="1dp"
+        		android:layout_marginLeft="10dp"
+	    		android:layout_marginRight="10dp"
+        		android:background="@color/tab_line" />
+			<TextView 
+	    		android:id="@+id/content_text"
+	    		android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:layout_marginLeft="10dp"
+	    		android:layout_marginRight="10dp"
+	    		android:textSize="14sp"
+	    		android:textColor="@color/black_light"/>
+	    </LinearLayout>
+	</ScrollView>
+</FrameLayout>

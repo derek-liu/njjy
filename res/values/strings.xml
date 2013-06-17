@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">社区门户</string>
+    <string name="app_name">移动门户</string>
 	<string name="pull_to_refresh_refreshing">刷新中</string>
 	<string name="pull_to_refresh_release">松手吧</string>
 	<string name="pull_to_refresh_normal">下拉刷新</string>
 	<string name="home_title">首页</string>
+	<string name="title">建邺区社区门户</string>
 </resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+	 >
+	<item android:drawable="@drawable/refresh_header_p1"
+		android:duration="200" />
+	<item android:drawable="@drawable/refresh_header_p2"
+		android:duration="200" />
+	<item android:drawable="@drawable/refresh_header_p3"
+		android:duration="200" />
+	<item android:drawable="@drawable/refresh_header_p4"
+		android:duration="200" />
+</animation-list>

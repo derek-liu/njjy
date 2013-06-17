@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFDF1E0" >
+	<FrameLayout 
+	    android:id="@+id/main_navi"
+	    android:layout_width="match_parent"
+	    android:layout_height="44dp" >
+	    <TextView
+	        android:id="@+id/main_navi_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:textSize="22sp"
+	        android:textColor="#FF231F20"
+	        android:text="@string/home_title" />
+	</FrameLayout>
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="4dp"
+	    android:background="#FFA02D4F" />
+	<cn.njjy.group.view.PTRListView
+	    android:id="@+id/main_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+</LinearLayout>

@@ -5,9 +5,9 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.gov.jyq.api.AsyncHttpClient;
@@ -15,33 +15,34 @@ import cn.gov.jyq.api.AsyncHttpClient.CacheControl;
 import cn.gov.jyq.api.RequestParams;
 import cn.gov.jyq.api.ResponseHandler;
 import cn.gov.jyq.model.JsonHandler;
-import cn.gov.jyq.utils.URLImageParse;
 
 public class ContentActivity extends Activity {
 	private ImageView mLoadingView;
-	private View mScrollView, mNaviLeft;
+	private TextView mNaviLeft;
 	private TextView mTitleView, mNameView;
-	private TextView mContentView;
+	private WebView mWebView;
 	private String mId;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_content);
-		mScrollView = findViewById(R.id.content_view);
 		mTitleView = (TextView)findViewById(R.id.content_title);
 		mNameView = (TextView)findViewById(R.id.content_name);
-		mContentView = (TextView)findViewById(R.id.content_text);
 		mLoadingView = (ImageView)findViewById(R.id.content_loading);
-		mId = getIntent().getStringExtra("aid");
+		mWebView = (WebView)findViewById(R.id.content_webview);
 		
-		mNaviLeft = findViewById(R.id.content_navi_left);
+		mNaviLeft = (TextView)findViewById(R.id.content_navi_left);
 		mNaviLeft.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				finish();
 			}
 		});
+		
+		mWebView.getSettings().setDefaultTextEncodingName("UTF-8");
+		mWebView.setBackgroundColor(0);
+		mId = getIntent().getStringExtra("aid");
 	}
 	
 	@Override
@@ -65,19 +66,18 @@ public class ContentActivity extends Activity {
 		public void onSuccess(int status, String response) {
 			JSONObject data = JsonHandler.parse(response);
 			String title = JsonHandler.parseString(data, "title");
-			String name = JsonHandler.parseString(data, "username") + "∑¢±Ì”⁄ 2ÃÏ«∞";
+			String name = JsonHandler.parseString(data, "username") + "ÂèëË°®‰∫é 2Â§©Ââç";
 			String text = JsonHandler.parseString(data, "content");
 			
 			mTitleView.setText(title);
 			mNameView.setText(name);
-			URLImageParse p = new URLImageParse(mContentView, ContentActivity.this);
-			mContentView.setText(Html.fromHtml(text, p, null));
+			mWebView.loadDataWithBaseURL("", text, "text/html", "UTF-8", null);
 		}
 		
 		@Override
 		public void onFinished() {
 			mLoadingView.setVisibility(View.GONE);
-			mScrollView.setVisibility(View.VISIBLE);
+			mWebView.setVisibility(View.VISIBLE);
 		}
 	};
 }

@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -14,10 +15,11 @@ import cn.gov.jyq.api.AsyncHttpClient.CacheControl;
 import cn.gov.jyq.api.RequestParams;
 import cn.gov.jyq.api.ResponseHandler;
 import cn.gov.jyq.model.JsonHandler;
+import cn.gov.jyq.utils.URLImageParse;
 
 public class ContentActivity extends Activity {
-	private ImageView mNaviLeft, mLoadingView;
-	private View mScrollView;
+	private ImageView mLoadingView;
+	private View mScrollView, mNaviLeft;
 	private TextView mTitleView, mNameView;
 	private TextView mContentView;
 	private String mId;
@@ -33,7 +35,7 @@ public class ContentActivity extends Activity {
 		mLoadingView = (ImageView)findViewById(R.id.content_loading);
 		mId = getIntent().getStringExtra("aid");
 		
-		mNaviLeft = (ImageView)findViewById(R.id.content_navi_left);
+		mNaviLeft = findViewById(R.id.content_navi_left);
 		mNaviLeft.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -68,7 +70,8 @@ public class ContentActivity extends Activity {
 			
 			mTitleView.setText(title);
 			mNameView.setText(name);
-			mContentView.setText(text);
+			URLImageParse p = new URLImageParse(mContentView, ContentActivity.this);
+			mContentView.setText(Html.fromHtml(text, p, null));
 		}
 		
 		@Override

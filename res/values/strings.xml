@@ -5,5 +5,6 @@
 	<string name="pull_to_refresh_release">松手吧</string>
 	<string name="pull_to_refresh_normal">下拉刷新</string>
 	<string name="home_title">首页</string>
-	<string name="title">建邺区社区门户</string>
+	<string name="back">返回</string>
+	<string name="title">建邺区社会管理服务互动平台</string>
 </resources>

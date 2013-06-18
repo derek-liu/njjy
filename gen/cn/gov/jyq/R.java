@@ -63,10 +63,11 @@ containing a value of this type.
         public static final int content_text=0x7f080007;
         public static final int content_title=0x7f080005;
         public static final int content_view=0x7f080004;
-        public static final int item_content=0x7f080010;
-        public static final int item_date=0x7f080013;
-        public static final int item_pic=0x7f080011;
-        public static final int item_text=0x7f080012;
+        public static final int item_big_image=0x7f080010;
+        public static final int item_content=0x7f080011;
+        public static final int item_date=0x7f080014;
+        public static final int item_pic=0x7f080012;
+        public static final int item_text=0x7f080013;
         public static final int item_title=0x7f08000f;
         public static final int main_cate=0x7f08000d;
         public static final int main_list=0x7f08000c;
@@ -74,9 +75,9 @@ containing a value of this type.
         public static final int main_navi_right=0x7f08000a;
         public static final int main_navi_title=0x7f080009;
         public static final int main_sub_title=0x7f08000b;
-        public static final int pull_to_refresh_image=0x7f080016;
-        public static final int pull_to_refresh_progress=0x7f080015;
-        public static final int pull_to_refresh_text=0x7f080014;
+        public static final int pull_to_refresh_image=0x7f080017;
+        public static final int pull_to_refresh_progress=0x7f080016;
+        public static final int pull_to_refresh_text=0x7f080015;
     }
     public static final class layout {
         public static final int activity_content=0x7f030000;
@@ -87,11 +88,12 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_name=0x7f060000;
+        public static final int back=0x7f060005;
         public static final int home_title=0x7f060004;
         public static final int pull_to_refresh_normal=0x7f060003;
         public static final int pull_to_refresh_refreshing=0x7f060001;
         public static final int pull_to_refresh_release=0x7f060002;
-        public static final int title=0x7f060005;
+        public static final int title=0x7f060006;
     }
     public static final class style {
         /** 

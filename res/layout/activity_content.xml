@@ -8,18 +8,22 @@
 	    android:layout_width="match_parent"
 	    android:layout_gravity="top"
 	    android:layout_height="44dp" >
-	    <ImageView 
+	    <TextView 
 	        android:id="@+id/content_navi_left"
 	        android:layout_width="60dp"
 	        android:layout_height="44dp"
 	        android:layout_gravity="left"
-	        android:src="@drawable/icon_back_btn" />
+	        android:gravity="center"
+	        android:textSize="14sp"
+	        android:textColor="#FFFFFFFF"
+	        android:text="@string/back"
+	        android:background="@drawable/icon_back_btn" />
 	    <TextView
 	        android:id="@+id/content_navi_title"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center"
-	        android:textSize="22sp"
+	        android:textSize="18sp"
 	        android:textColor="@color/black_deep"
 	        android:text="@string/title" />
 	</FrameLayout>

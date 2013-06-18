@@ -1,11 +1,14 @@
 package cn.gov.jyq;
 
 import android.content.Context;
+import android.text.Html;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import cn.gov.jyq.imageloader.ImageLoader;
 import cn.gov.jyq.model.News;
 
 public class ListAdapter extends AbsAdapter<News>{
@@ -22,7 +25,8 @@ public class ListAdapter extends AbsAdapter<News>{
 			ViewHolder holder = new ViewHolder();
 			holder.mTitle = (TextView)view.findViewById(R.id.item_title);
 			holder.mContent = (TextView)view.findViewById(R.id.item_text);
-			holder.mImage = (ImageView)view.findViewById(R.id.item_pic);
+			holder.mBigImage = (ImageView)view.findViewById(R.id.item_big_image);
+			holder.mImageView = (ImageView)view.findViewById(R.id.item_pic);
 			holder.mDate = (TextView)view.findViewById(R.id.item_date);
 			view.setTag(holder);
 		}
@@ -37,11 +41,24 @@ public class ListAdapter extends AbsAdapter<News>{
 		
 		holder.mTitle.setText(news.mTitle);
 		holder.mContent.setText(news.mContent);
-		holder.mDate.setText(news.mDate);
+		holder.mDate.setText(Html.fromHtml(news.mDate));
+		
+		if(TextUtils.isEmpty(news.mPicUrl)) {
+			holder.mBigImage.setVisibility(View.GONE);
+			holder.mImageView.setVisibility(View.GONE);
+		} else {
+			if(pos == 0) {
+				holder.mBigImage.setVisibility(View.VISIBLE);
+				ImageLoader.getInstance().bind(news.mPicUrl, holder.mBigImage);
+			} else {
+				holder.mImageView.setVisibility(View.VISIBLE);
+				ImageLoader.getInstance().bind(news.mPicUrl, holder.mImageView);
+			}
+		}
 	}
 	
 	private static class ViewHolder {
 		TextView mTitle, mContent, mDate;
-		ImageView mImage;
+		ImageView mBigImage, mImageView;
 	}
 }

@@ -1,5 +1,6 @@
 package cn.gov.jyq;
 
+import cn.gov.jyq.imageloader.ImageLoader;
 import cn.gov.jyq.utils.AppUtils;
 import android.app.Application;
 import android.os.Environment;
@@ -19,6 +20,7 @@ public class MyApp extends Application {
 		super.onCreate();
 		mInstance = this;
 		AppUtils.initialize(this);
+		ImageLoader.getInstance().init(this);
 	}
 	
 	public static boolean getExternalAvailable() {

@@ -13,7 +13,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center"
-	        android:textSize="22sp"
+	        android:textSize="18sp"
 	        android:textColor="@color/black_deep"
 	        android:text="@string/title" />
 	    <ImageView 
